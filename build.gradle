@@ -29,6 +29,10 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
+
+    implementation group: 'org.springdoc', name: 'springdoc-openapi-ui', version: '1.6.12'
+
+    implementation "org.mariadb.jdbc:mariadb-java-client:2.1.2"
 }
 
 tasks.named('test') {
