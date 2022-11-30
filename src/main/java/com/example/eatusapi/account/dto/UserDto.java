@@ -3,7 +3,7 @@ package com.example.eatusapi.account.dto;
 
 import lombok.Data;
 
-import java.util.*;
+import java.sql.Date;
 @Data
 public class UserDto {
     String userId;
