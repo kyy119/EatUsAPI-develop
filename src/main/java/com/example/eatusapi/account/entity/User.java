@@ -6,7 +6,7 @@ import lombok.RequiredArgsConstructor;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.util.Date;
+import java.sql.Date;
 
 @javax.persistence.Entity
 @Data
@@ -21,5 +21,4 @@ public class User {
     String address;
     String addressDetail;
     Date createdAt;
-
 }
