@@ -5,6 +5,7 @@ create table user(
                      password varchar(25),
                      address varchar(25),
                      addressDetail varchar(25),
-                     createdAt date,
+                     createdAt timestamp default NOW(),
+                     authority varchar(25),
                      primary key (id)
 );
