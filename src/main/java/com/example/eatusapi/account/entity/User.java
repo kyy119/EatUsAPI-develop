@@ -2,6 +2,7 @@ package com.example.eatusapi.account.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
+import org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -31,6 +32,7 @@ public class User implements UserDetails {
     @Column(nullable = false,unique = true)
     String password;
     String address;
+
     String addressDetail;
     Date createdAt;
 

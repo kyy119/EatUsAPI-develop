@@ -23,7 +23,7 @@ public class TokenProvider {
    private final Logger logger = LoggerFactory.getLogger(TokenProvider.class);
    private final UserDetailsService userDetailsService;
 
-   private String secretKey = "jinjooone";
+   private String secretKey = "kimtamiangiyoungsinsiakimtamiangiyoungsinsia";
    private final long validsecond = 1000l*60*60;
 
    @PostConstruct
