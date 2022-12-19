@@ -9,5 +9,4 @@ public class AddUserRequest {
     String password;
     String address;
     String addressDetail;
-
 }

@@ -9,3 +9,4 @@ create table user(
                      authority varchar(25),
                      primary key (id)
 );
+

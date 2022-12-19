@@ -36,7 +36,7 @@ public class User implements UserDetails {
     String addressDetail;
     Date createdAt;
 
-    @ElementCollection(fetch = FetchType.EAGER)
+    @ElementCollection(fetch = FetchType.LAZY)
     @Builder.Default
     private List<String> roles = new ArrayList<>();
 
