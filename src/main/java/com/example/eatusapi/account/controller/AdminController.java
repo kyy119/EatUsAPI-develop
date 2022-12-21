@@ -6,10 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,6 +22,7 @@ public class AdminController {
         this.adminService = adminService;
     }
 
+    @ResponseBody
     @GetMapping("/all")
     public List<User> getAllUsers()
     {
@@ -36,6 +34,7 @@ public class AdminController {
 
         return users;
     }
+    @ResponseBody
     @GetMapping("/find/{uid}")
     public User getUser(@RequestParam String uid) throws Exception
     {
@@ -44,6 +43,7 @@ public class AdminController {
         return user;
     }
 
+    @ResponseBody
     @GetMapping("/delete/{user_id}")
     public void deleteUser(@RequestParam(value = "user_id") String uid) throws Exception
     {

@@ -82,9 +82,15 @@ public class AuthService {
                 .token(tokenProvider.createToken(user.getUserId(),user.getRoles()))
                 .build();
 
-        tokenDto.setCode(1);
+        if(user.getRoles().get(0).toString().equals("ROLE_ADMIN")) {
+            tokenDto.setCode(1);
+        }
+        else{
+            tokenDto.setCode(2);
+        }
         tokenDto.setSuccess(true);
         tokenDto.setMessage("success");
+
 
 
         return tokenDto;

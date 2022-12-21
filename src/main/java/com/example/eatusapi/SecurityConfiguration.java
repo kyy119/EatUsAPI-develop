@@ -1,5 +1,4 @@
 package com.example.eatusapi;
-
 import com.example.eatusapi.security.JwtAccessDeniedHandler;
 import com.example.eatusapi.security.JwtAuthenticationEntryPoint;
 import com.example.eatusapi.security.JwtSecurtityConfig;
@@ -7,12 +6,10 @@ import com.example.eatusapi.security.jwt.TokenProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -43,11 +40,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/auth/**").permitAll()
                 .antMatchers("/admin/**").permitAll()
                 .anyRequest().authenticated()
-
                 .and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-
                 .and()
                 .apply(new JwtSecurtityConfig(tokenProvider));
 
